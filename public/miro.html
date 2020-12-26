@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
     <script src="https://miro.com/app/static/sdk.1.1.js"></script>
     <script>
+      async function create(words, x, y) {
+        words.map(async (text, i) => {
+          const col = i % 5;
+          const row = Math.floor(i / 5);
+          const props = {
+            type: "shape",
+            text,
+            width: 100,
+            height: 100,
+            style: {
+              backgroundColor: "#ffffff",
+              backgroundOpacity: 0.5,
+              borderColor: "#1a1a1a",
+              textColor: "#1a1a1a",
+            },
+            x: x + 5 + 105 * col,
+            y: y + 5 + 105 * row,
+          };
+
+          return miro.board.widgets.create(props);
+        });
+      }
+
       miro.onReady(() => {
         miro.initialize({
           extensionPoints: {
             bottomBar: {
-              title: "Some title",
+              title: "new",
               svgIcon:
                 '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
-              onClick: () => {
-                alert("Hi!");
+              onClick: async () => {
+                fetch("https://codenames.fampinheiro.vercel.app/api/new").then(
+                  console.log
+                );
+                // await create(words, 0, 0);
               },
             },
           },
