@@ -12,18 +12,18 @@
 <Layout>
   <div class="place-self-center flex flex-col flex-center">
     <div class="w-80 my-4">
-      <p class="text-green-900">
-        The "Create" button generates a randomly map card with a 5×5 grid that
+      <p class="text-gray-900">
+        the "create" button generates a randomly map card with a 5×5 grid that
         you can use to play the
         <a
           class="underline"
           target="_blank"
-          href="https://en.wikipedia.org/wiki/Codenames_(board_game)">Codenames</a>
-        board game.
+          href="https://en.wikipedia.org/wiki/Codenames_(board_game)">codenames</a>
+        board game
       </p>
     </div>
     <div class="mt-4">
-      <Button onClick={handleClick}>Create</Button>
+      <Button onClick={handleClick}>create</Button>
     </div>
   </div>
 </Layout>

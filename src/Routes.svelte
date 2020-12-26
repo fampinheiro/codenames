@@ -19,7 +19,7 @@
 </style>
 
 <Router {url}>
-  <div class="bg-green-50 grid">
+  <div class="bg-gray-50 grid">
     <Route path="/:code" let:params>
       <Card code={params.code} />
     </Route>
