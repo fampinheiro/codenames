@@ -16,12 +16,23 @@
   }
 </script>
 
+<style>
+  .red {
+    @apply text-red-500;
+  }
+  .blue {
+    @apply text-blue-500;
+  }
+</style>
+
 <Layout>
-  <div class="flex-1 place-self-center flex flex-col items-center gap-4 w-80">
+  <div class="flex-1 grid place-items-center place-self-center gap-4 w-80">
     <p class="text-gray-800">
       the
       <span
-        class="font-bold {player === 'red' ? 'text-red-500' : 'text-blue-500'}">{player}
+        class:red={player === 'red'}
+        class:blue={player === 'blue'}
+        class="font-bold">{player}
         agents</span>
       start this round
     </p>

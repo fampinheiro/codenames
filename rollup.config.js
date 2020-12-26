@@ -48,7 +48,8 @@ export default {
 				postcss: {
 					plugins: [
 						require(require.resolve("tailwindcss")),
-						require(require.resolve("autoprefixer"))
+						require(require.resolve("autoprefixer")),
+						require(require.resolve("postcss-nesting"))
 					]
 				}
 			})
