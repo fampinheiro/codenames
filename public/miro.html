@@ -35,10 +35,11 @@
               svgIcon:
                 '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
               onClick: async () => {
-                fetch("https://codenames.fampinheiro.vercel.app/api/new").then(
-                  console.log
+                const res = await fetch(
+                  "https://codenames.fampinheiro.vercel.app/api/new"
                 );
-                // await create(words, 0, 0);
+                const words = await res.json();
+                await create(words, 0, 0);
               },
             },
           },
