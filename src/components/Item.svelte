@@ -9,19 +9,16 @@
 </script>
 
 <style>
-  li {
-    @apply h-8 w-8 rounded border;
-  }
   .red {
-    @apply border-red-500 bg-red-100;
+    @apply border-red-500 bg-red-200;
   }
 
   .blue {
-    @apply border-blue-500 bg-blue-100;
+    @apply border-blue-500 bg-blue-200;
   }
 
   .neutral {
-    @apply border-yellow-500 bg-yellow-100;
+    @apply border-yellow-500 bg-yellow-200;
   }
 
   .gameover {
@@ -30,8 +27,9 @@
 </style>
 
 <li
+  class="h-8 w-8 rounded border"
   class:neutral={item === '0'}
-  class:red={item === '1'}
-  class:blue={item === '2'}
+  class:blue={item === '1'}
+  class:red={item === '2'}
   class:gameover={item === '3'}
   aria-label={label[item]} />

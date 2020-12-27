@@ -27,16 +27,25 @@
 
 <Layout>
   <div class="flex-1 grid place-items-center place-self-center gap-4 w-80">
-    <p class="text-gray-800">
-      the
-      <span
-        class:red={player === 'red'}
-        class:blue={player === 'blue'}
-        class="font-bold">{player}
-        agents</span>
-      start this round
-    </p>
+    <div>
+      <p>
+        use the map card to play the
+        <a
+          class="underline"
+          target="_blank"
+          href="https://en.wikipedia.org/wiki/Codenames_(board_game)">codenames</a>
+        board game, the
+        <span
+          class:red={player === 'red'}
+          class:blue={player === 'blue'}
+          class="font-bold">{player}
+          agents</span>
+        start this round
+      </p>
+    </div>
     <Card {player} {grid} />
-    <Button onClick={handleClick}>recreate</Button>
+    <div>
+      <Button onClick={handleClick}>recreate</Button>
+    </div>
   </div>
 </Layout>

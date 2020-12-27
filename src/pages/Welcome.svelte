@@ -12,9 +12,9 @@
 <Layout>
   <div class="place-self-center flex flex-col flex-center">
     <div class="w-80 my-4">
-      <p class="text-gray-900">
-        the "create" button generates a randomly map card with a 5×5 grid that
-        you can use to play the
+      <p>
+        the "create" button generates a random map card with a 5×5 grid that you
+        can use to play the
         <a
           class="underline"
           target="_blank"
