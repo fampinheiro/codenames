@@ -1,4 +1,4 @@
-import randomizer from "../src/utils/randomizer";
+const { floor, random } = Math;
 
 const words = [
   "acorde",
@@ -299,5 +299,9 @@ const words = [
 ];
 
 module.exports = (_, res) => {
-  res.json(randomizer(words).slice(0, 25));
+  return res.json(
+    Array(25)
+      .fill()
+      .map((_) => words[floor(random() * words.length)])
+  );
 };
